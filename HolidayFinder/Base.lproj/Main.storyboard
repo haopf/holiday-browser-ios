@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,8 @@
                                 <rect key="frame" x="0.0" y="248" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Cm-Ny-Vhj" userLabel="Loading View">
-                                <rect key="frame" x="59" y="203" width="203" height="159"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cm-Ny-Vhj" userLabel="Loading View">
+                                <rect key="frame" x="59" y="205" width="203" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zHD-j0-o7o">
@@ -45,6 +46,10 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="Y8j-nL-0Uf"/>
+                                    <constraint firstAttribute="height" constant="159" id="qIF-AR-dPr"/>
+                                </constraints>
                             </view>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-pN-igG">
                                 <rect key="frame" x="0.0" y="189" width="320" height="191"/>
@@ -91,10 +96,16 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="fzJ-u5-HEj"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-TP-lvA">
-                                <rect key="frame" x="144" y="530" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-TP-lvA">
+                                <rect key="frame" x="130" y="520" width="60" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QHT-Cf-Yn2"/>
+                                    <constraint firstAttribute="width" constant="60" id="lhE-uJ-WbO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -111,6 +122,8 @@
                             <constraint firstAttribute="trailing" secondItem="MSr-pN-igG" secondAttribute="trailing" id="Oku-Ib-5Dm"/>
                             <constraint firstAttribute="trailing" secondItem="UcG-yY-6IN" secondAttribute="trailing" id="P45-47-p8b"/>
                             <constraint firstAttribute="bottom" secondItem="UcG-yY-6IN" secondAttribute="bottom" id="WED-Xe-eZD"/>
+                            <constraint firstAttribute="centerY" secondItem="3Cm-Ny-Vhj" secondAttribute="centerY" id="dcE-HX-ylR"/>
+                            <constraint firstAttribute="centerX" secondItem="3Cm-Ny-Vhj" secondAttribute="centerX" id="eeF-Ld-bNl"/>
                             <constraint firstAttribute="centerX" secondItem="oU3-TP-lvA" secondAttribute="centerX" id="nEu-qT-nYo"/>
                         </constraints>
                     </view>

@@ -42,8 +42,14 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [self beginSearching];
     
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
