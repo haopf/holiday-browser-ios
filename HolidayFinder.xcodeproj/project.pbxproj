@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C9C23F1805119200BC9F6D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C23E1805119200BC9F6D /* Reachability.m */; };
+		68C9C241180511C000BC9F6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C9C240180511C000BC9F6D /* SystemConfiguration.framework */; };
 		68CC2E3A17FD03B600B9FE41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CC2E3917FD03B600B9FE41 /* Foundation.framework */; };
 		68CC2E3C17FD03B600B9FE41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CC2E3B17FD03B600B9FE41 /* CoreGraphics.framework */; };
 		68CC2E3E17FD03B600B9FE41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CC2E3D17FD03B600B9FE41 /* UIKit.framework */; };
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68C9C23D1805119200BC9F6D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		68C9C23E1805119200BC9F6D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		68C9C240180511C000BC9F6D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		68CC2E3617FD03B600B9FE41 /* HolidayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CC2E3917FD03B600B9FE41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68CC2E3B17FD03B600B9FE41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C9C241180511C000BC9F6D /* SystemConfiguration.framework in Frameworks */,
 				68F9C9471801242C00021B28 /* libz.dylib in Frameworks */,
 				68CC2E3C17FD03B600B9FE41 /* CoreGraphics.framework in Frameworks */,
 				68CC2E3E17FD03B600B9FE41 /* UIKit.framework in Frameworks */,
@@ -115,6 +121,7 @@
 		68CC2E3817FD03B600B9FE41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68C9C240180511C000BC9F6D /* SystemConfiguration.framework */,
 				68F9C9461801242C00021B28 /* libz.dylib */,
 				68CC2E3917FD03B600B9FE41 /* Foundation.framework */,
 				68CC2E3B17FD03B600B9FE41 /* CoreGraphics.framework */,
@@ -134,6 +141,8 @@
 				68CC2E4F17FD03B600B9FE41 /* HDYViewController.m */,
 				68CC2E5117FD03B600B9FE41 /* Images.xcassets */,
 				68CC2E4017FD03B600B9FE41 /* Supporting Files */,
+				68C9C23D1805119200BC9F6D /* Reachability.h */,
+				68C9C23E1805119200BC9F6D /* Reachability.m */,
 			);
 			path = HolidayFinder;
 			sourceTree = "<group>";
@@ -306,6 +315,7 @@
 				68CC2E7117FD06C700B9FE41 /* ServerBrowser.m in Sources */,
 				68CC2E5017FD03B600B9FE41 /* HDYViewController.m in Sources */,
 				68CC2E4617FD03B600B9FE41 /* main.m in Sources */,
+				68C9C23F1805119200BC9F6D /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

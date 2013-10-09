@@ -8,6 +8,7 @@
 
 #import "HDYViewController.h"
 #import "ServerBrowser.h"
+#import "Reachability.h"
 
 #define SERVICE_TYPE @"_iotas._tcp"
 #define HELP_URL @"http://holiday.moorescloud.com/"
@@ -24,8 +25,12 @@
 @interface HDYViewController () <ServerBrowserDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
     ServerBrowser* _browser;
     BOOL _isShowingHolidays;
+    Reachability* _reachability;
+    NSTimer* _reachabilityTimer;
 }
+
 @property (strong, nonatomic) IBOutlet UICollectionView *holidayCollectionView;
+@property (strong, nonatomic) IBOutlet UILabel *connectToWifiLabel;
 
 @property (strong, nonatomic) IBOutlet UIView *searchingView;
 @property (strong, nonatomic) IBOutlet UILabel *searchingTakingTooLongView;
@@ -41,9 +46,29 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
+    _reachability = [Reachability reachabilityForLocalWiFi];
+    [_reachability startNotifier];
     
     [self beginSearching];
     
+    _reachabilityTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateReachability:) userInfo:nil repeats:YES];
+    
+    self.connectToWifiLabel.alpha = 0.0;
+    
+}
+
+- (void) updateReachability:(NSTimer*) timer {
+    
+    BOOL hidden = (_reachability.currentReachabilityStatus == ReachableViaWiFi);
+
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        if (hidden) {
+            self.connectToWifiLabel.alpha = 0.0;
+        } else {
+            self.connectToWifiLabel.alpha = 1.0;
+        }
+    }];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
