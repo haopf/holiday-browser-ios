@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		68C9C23F1805119200BC9F6D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C23E1805119200BC9F6D /* Reachability.m */; };
 		68C9C241180511C000BC9F6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C9C240180511C000BC9F6D /* SystemConfiguration.framework */; };
+		68C9C2441805171500BC9F6D /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C9C2431805171500BC9F6D /* Main-iPad.storyboard */; };
 		68CC2E3A17FD03B600B9FE41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CC2E3917FD03B600B9FE41 /* Foundation.framework */; };
 		68CC2E3C17FD03B600B9FE41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CC2E3B17FD03B600B9FE41 /* CoreGraphics.framework */; };
 		68CC2E3E17FD03B600B9FE41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CC2E3D17FD03B600B9FE41 /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 		68C9C23D1805119200BC9F6D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		68C9C23E1805119200BC9F6D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		68C9C240180511C000BC9F6D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		68C9C2431805171500BC9F6D /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main-iPad.storyboard"; sourceTree = "<group>"; };
 		68CC2E3617FD03B600B9FE41 /* HolidayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CC2E3917FD03B600B9FE41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68CC2E3B17FD03B600B9FE41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +99,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68C9C242180516EB00BC9F6D /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		68CC2E2D17FD03B600B9FE41 = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +143,11 @@
 		68CC2E3F17FD03B600B9FE41 /* HolidayFinder */ = {
 			isa = PBXGroup;
 			children = (
+				68C9C242180516EB00BC9F6D /* iPad */,
 				68CC2E4817FD03B600B9FE41 /* HDYAppDelegate.h */,
 				68CC2E4917FD03B600B9FE41 /* HDYAppDelegate.m */,
 				68CC2E4B17FD03B600B9FE41 /* Main.storyboard */,
+				68C9C2431805171500BC9F6D /* Main-iPad.storyboard */,
 				68CC2E4E17FD03B600B9FE41 /* HDYViewController.h */,
 				68CC2E4F17FD03B600B9FE41 /* HDYViewController.m */,
 				68CC2E5117FD03B600B9FE41 /* Images.xcassets */,
@@ -277,6 +288,7 @@
 				68CC2E5217FD03B600B9FE41 /* Images.xcassets in Resources */,
 				68CC2E4417FD03B600B9FE41 /* InfoPlist.strings in Resources */,
 				68CC2E4D17FD03B600B9FE41 /* Main.storyboard in Resources */,
+				68C9C2441805171500BC9F6D /* Main-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,12 +458,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HolidayFinder/HolidayFinder-Prefix.pch";
 				INFOPLIST_FILE = "HolidayFinder/HolidayFinder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/desplesda/Desktop/Work/HolidayFinder/TestFlight,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -465,12 +478,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HolidayFinder/HolidayFinder-Prefix.pch";
 				INFOPLIST_FILE = "HolidayFinder/HolidayFinder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/desplesda/Desktop/Work/HolidayFinder/TestFlight,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

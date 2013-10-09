@@ -55,6 +55,9 @@
     
     self.connectToWifiLabel.alpha = 0.0;
     
+    self.holidayCollectionView.layer.borderColor = [UIColor redColor].CGColor;
+    self.holidayCollectionView.layer.borderWidth = 1.0;
+    
 }
 
 - (void) updateReachability:(NSTimer*) timer {
@@ -93,6 +96,11 @@
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAll;
+    }
     return UIInterfaceOrientationMaskPortrait;
 }
 
