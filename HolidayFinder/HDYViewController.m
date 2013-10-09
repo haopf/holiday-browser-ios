@@ -39,7 +39,6 @@
 {
     [super viewDidLoad];
     
-    
     // Do any additional setup after loading the view, typically from a nib.
     
     
@@ -66,6 +65,10 @@
     self.searchingView.alpha = 0.0;
     [self.holidayCollectionView reloadData];
     
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void) applicationDidBecomeActive:(NSNotification*)notification {
