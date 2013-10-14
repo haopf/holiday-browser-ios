@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect to Wi-Fi to find your Holiday." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNk-DO-yOu">
-                                <rect key="frame" x="16" y="28" width="288" height="21"/>
+                                <rect key="frame" x="16" y="70" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -123,7 +123,7 @@
                             <constraint firstItem="IWF-6x-jZk" firstAttribute="top" secondItem="oU3-TP-lvA" secondAttribute="bottom" constant="20" symbolic="YES" id="304-8Z-43e"/>
                             <constraint firstAttribute="centerY" secondItem="MSr-pN-igG" secondAttribute="centerY" id="6Px-zb-O3Y"/>
                             <constraint firstItem="MSr-pN-igG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6To-Mw-G0x"/>
-                            <constraint firstItem="kNk-DO-yOu" firstAttribute="top" secondItem="IPo-fg-wkn" secondAttribute="bottom" constant="20" symbolic="YES" id="BlV-9R-9JP"/>
+                            <constraint firstItem="kNk-DO-yOu" firstAttribute="top" secondItem="IPo-fg-wkn" secondAttribute="bottom" constant="50" id="BlV-9R-9JP"/>
                             <constraint firstItem="MSr-pN-igG" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Czm-KZ-LkX"/>
                             <constraint firstAttribute="trailing" secondItem="MSr-pN-igG" secondAttribute="trailing" id="Hwh-E6-7HS"/>
                             <constraint firstItem="UcG-yY-6IN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="I1Q-LA-4iK"/>
