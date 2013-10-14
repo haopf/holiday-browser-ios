@@ -11,7 +11,7 @@
 #import "Reachability.h"
 
 #define SERVICE_TYPE @"_iotas._tcp"
-#define HELP_URL @"http://holiday.moorescloud.com/"
+#define HELP_URL @"http://support.moorescloud.com/ios-browser-holiday/"
 
 @interface HolidayCell : UICollectionViewCell
 @property (strong) IBOutlet UILabel* label;
@@ -55,8 +55,6 @@
     
     self.connectToWifiLabel.alpha = 0.0;
     
-    self.holidayCollectionView.layer.borderColor = [UIColor redColor].CGColor;
-    self.holidayCollectionView.layer.borderWidth = 1.0;
     
 }
 
