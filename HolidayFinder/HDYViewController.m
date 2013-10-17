@@ -204,7 +204,7 @@
     
     NSNetService* host = [_browser.discoveredServers objectAtIndex:indexPath.item];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://%@/", host.hostName];
+    NSString* urlString = [NSString stringWithFormat:@"http://%@:%i/", host.hostName, host.port];
     
     NSURL* url = [NSURL URLWithString:urlString];
     
