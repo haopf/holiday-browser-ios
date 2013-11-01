@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68517F0B182263BF0072954E /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 68517F08182263BF0072954E /* GCDAsyncSocket.m */; };
+		68517F0C182263BF0072954E /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 68517F0A182263BF0072954E /* GCDAsyncUdpSocket.m */; };
 		68C9C23F1805119200BC9F6D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C9C23E1805119200BC9F6D /* Reachability.m */; };
 		68C9C241180511C000BC9F6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C9C240180511C000BC9F6D /* SystemConfiguration.framework */; };
 		68C9C2441805171500BC9F6D /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C9C2431805171500BC9F6D /* Main-iPad.storyboard */; };
@@ -40,11 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68517F07182263BF0072954E /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		68517F08182263BF0072954E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		68517F09182263BF0072954E /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		68517F0A182263BF0072954E /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		68C9C23D1805119200BC9F6D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		68C9C23E1805119200BC9F6D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		68C9C240180511C000BC9F6D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		68C9C2431805171500BC9F6D /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main-iPad.storyboard"; sourceTree = "<group>"; };
-		68CC2E3617FD03B600B9FE41 /* HolidayFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68CC2E3617FD03B600B9FE41 /* Holiday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holiday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CC2E3917FD03B600B9FE41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68CC2E3B17FD03B600B9FE41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		68CC2E3D17FD03B600B9FE41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -99,6 +105,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68517F06182263BF0072954E /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				68517F07182263BF0072954E /* GCDAsyncSocket.h */,
+				68517F08182263BF0072954E /* GCDAsyncSocket.m */,
+				68517F09182263BF0072954E /* GCDAsyncUdpSocket.h */,
+				68517F0A182263BF0072954E /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		68C9C242180516EB00BC9F6D /* iPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +138,7 @@
 		68CC2E3717FD03B600B9FE41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68CC2E3617FD03B600B9FE41 /* HolidayFinder.app */,
+				68CC2E3617FD03B600B9FE41 /* Holiday.app */,
 				68CC2E5717FD03B600B9FE41 /* HolidayFinderTests.xctest */,
 			);
 			name = Products;
@@ -143,6 +160,7 @@
 		68CC2E3F17FD03B600B9FE41 /* HolidayFinder */ = {
 			isa = PBXGroup;
 			children = (
+				68517F06182263BF0072954E /* GCD */,
 				68C9C242180516EB00BC9F6D /* iPad */,
 				68CC2E4817FD03B600B9FE41 /* HDYAppDelegate.h */,
 				68CC2E4917FD03B600B9FE41 /* HDYAppDelegate.m */,
@@ -210,9 +228,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		68CC2E3517FD03B600B9FE41 /* HolidayFinder */ = {
+		68CC2E3517FD03B600B9FE41 /* Holiday */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68CC2E6817FD03B600B9FE41 /* Build configuration list for PBXNativeTarget "HolidayFinder" */;
+			buildConfigurationList = 68CC2E6817FD03B600B9FE41 /* Build configuration list for PBXNativeTarget "Holiday" */;
 			buildPhases = (
 				68F9C93F1801209B00021B28 /* ShellScript */,
 				68CC2E3217FD03B600B9FE41 /* Sources */,
@@ -223,9 +241,9 @@
 			);
 			dependencies = (
 			);
-			name = HolidayFinder;
+			name = Holiday;
 			productName = HolidayFinder;
-			productReference = 68CC2E3617FD03B600B9FE41 /* HolidayFinder.app */;
+			productReference = 68CC2E3617FD03B600B9FE41 /* Holiday.app */;
 			productType = "com.apple.product-type.application";
 		};
 		68CC2E5617FD03B600B9FE41 /* HolidayFinderTests */ = {
@@ -256,6 +274,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Secret Lab";
 				TargetAttributes = {
+					68CC2E3517FD03B600B9FE41 = {
+						DevelopmentTeam = 5V2A4389PA;
+					};
 					68CC2E5617FD03B600B9FE41 = {
 						TestTargetID = 68CC2E3517FD03B600B9FE41;
 					};
@@ -274,7 +295,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68CC2E3517FD03B600B9FE41 /* HolidayFinder */,
+				68CC2E3517FD03B600B9FE41 /* Holiday */,
 				68CC2E5617FD03B600B9FE41 /* HolidayFinderTests */,
 			);
 		};
@@ -323,9 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68517F0B182263BF0072954E /* GCDAsyncSocket.m in Sources */,
 				68CC2E4A17FD03B600B9FE41 /* HDYAppDelegate.m in Sources */,
 				68CC2E7117FD06C700B9FE41 /* ServerBrowser.m in Sources */,
 				68CC2E5017FD03B600B9FE41 /* HDYViewController.m in Sources */,
+				68517F0C182263BF0072954E /* GCDAsyncUdpSocket.m in Sources */,
 				68CC2E4617FD03B600B9FE41 /* main.m in Sources */,
 				68C9C23F1805119200BC9F6D /* Reachability.m in Sources */,
 			);
@@ -344,7 +367,7 @@
 /* Begin PBXTargetDependency section */
 		68CC2E5D17FD03B600B9FE41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 68CC2E3517FD03B600B9FE41 /* HolidayFinder */;
+			target = 68CC2E3517FD03B600B9FE41 /* Holiday */;
 			targetProxy = 68CC2E5C17FD03B600B9FE41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -455,6 +478,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HolidayFinder/HolidayFinder-Prefix.pch";
 				INFOPLIST_FILE = "HolidayFinder/HolidayFinder-Info.plist";
@@ -464,6 +489,7 @@
 					/Users/desplesda/Desktop/Work/HolidayFinder/TestFlight,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -475,6 +501,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SECRET LAB PTY. LTD.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SECRET LAB PTY. LTD.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HolidayFinder/HolidayFinder-Prefix.pch";
 				INFOPLIST_FILE = "HolidayFinder/HolidayFinder-Info.plist";
@@ -484,6 +512,7 @@
 					/Users/desplesda/Desktop/Work/HolidayFinder/TestFlight,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -543,7 +572,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68CC2E6817FD03B600B9FE41 /* Build configuration list for PBXNativeTarget "HolidayFinder" */ = {
+		68CC2E6817FD03B600B9FE41 /* Build configuration list for PBXNativeTarget "Holiday" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68CC2E6917FD03B600B9FE41 /* Debug */,

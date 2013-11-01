@@ -9,6 +9,7 @@
 #import "HDYViewController.h"
 #import "ServerBrowser.h"
 #import "Reachability.h"
+#import "GCDAsyncSocket.h"
 
 #define SERVICE_TYPE @"_iotas._tcp"
 #define HELP_URL @"http://support.moorescloud.com/ios-browser-holiday/"
@@ -204,7 +205,17 @@
     
     NSNetService* host = [_browser.discoveredServers objectAtIndex:indexPath.item];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://%@:%i/", host.hostName, host.port];
+    if (host.addresses.count <= 0) {
+        NSLog(@"Selected holiday (%@) had no addresses..", host.hostName);
+        return;
+    }
+    
+    NSData* address = [host.addresses objectAtIndex:0];
+    
+    NSString* addressString = [GCDAsyncSocket hostFromAddress:address];
+    NSString* portString = [NSString stringWithFormat:@"%i", [GCDAsyncSocket portFromAddress:address]];
+    
+    NSString* urlString = [NSString stringWithFormat:@"http://%@:%@/", addressString, portString];
     
     NSURL* url = [NSURL URLWithString:urlString];
     
