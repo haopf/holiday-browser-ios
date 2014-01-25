@@ -8,15 +8,16 @@
 
 #import "HDYAppDelegate.h"
 
-#define TESTFLIGHT_TOKEN @"f52bf2e3-bd3e-4042-b3f2-6c17b410d9f4"
+#define TESTFLIGHT_TOKEN @"Insert Testflight Token Here"
 
 @implementation HDYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
+#ifdef TESTFLIGHT_SDK_VERSION
     [TestFlight takeOff:TESTFLIGHT_TOKEN];
+#endif
     
     return YES;
 }
